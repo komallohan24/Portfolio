@@ -1,5 +1,5 @@
 const menuIcon = document.getElementById("menuIcon");
-const navLinks = document.getElementById("navLinks");
+const navLinks = document.getElementById("navlinks");
 
 menuIcon.addEventListener("click" , () => {
     navLinks.classList.toggle("show");
