@@ -2,7 +2,7 @@ const menuIcon = document.getElementById("menuIcon");
 const navLinks = document.getElementById("navLinks");
 
 menuIcon.addEventListener("click" , () => {
-    navLinks.classList.toggle("open");
+    navLinks.classList.toggle("show");
 })
 
 const sections = document.querySelectorAll("section");
