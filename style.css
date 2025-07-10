@@ -361,7 +361,7 @@ margin-bottom: 15px;
         padding: 10px;
     }
 
-    .nav-links.open
+    .nav-links.show
     {
         display: flex;
 }
