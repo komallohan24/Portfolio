@@ -144,6 +144,7 @@ header{
   font-size: 24px;
   cursor: pointer;
 }
+
 .home-img img{
     width: 400px;
     height: 400px;
@@ -154,7 +155,7 @@ header{
 }
 
 .sectionabout{
-    background-color: #46d9ec;
+    background-color: #c2e9ee;
     padding: 90px 20%;
     color: #111;
     border-bottom: 2px solid #021f1d;
@@ -175,7 +176,7 @@ header{
 }
 
 .skills-section{
-    background-color: #46d9ec;
+    background-color: #c2e9ee;
     padding: 90px 20%;
     color: #111;
    text-align: center;
@@ -188,6 +189,7 @@ header{
     grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
     gap:10px;
     padding: 20px 10px;
+    background: #06b6d4;
 }
 
 .skill-card{
@@ -197,6 +199,7 @@ header{
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    background: #c2e9ee;
 }
 
 .skill-card:hover{
@@ -220,7 +223,7 @@ header{
 }
 
 .projects-section{
-     background-color: #46d9ec;
+     background-color: #c2e9ee;
     padding: 90px 20%;
     color: #111;
    text-align: center;
@@ -236,21 +239,21 @@ header{
 
 .projects-container
 {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 30px;
-    padding: 0 10px;
-    flex-direction:row;
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:10px;
+    padding: 20px 10px;
+    background: #06b6d4;
 }
 
 .project-card{
-    background: rgb(176, 240, 124);
-    color: #111;
-    border-radius: 12px ;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-    text-align: center;
+      background-color: linear-gradient(to bottom, #e0f2ff, #c3dafe);
     padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    background: #c2e9ee;
 }
 
 .project-card:hover{
@@ -259,7 +262,7 @@ header{
 
 .project-card img{
     width: 50%;
-    height: 120px;
+    height: 50%;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -288,7 +291,7 @@ margin-bottom: 15px;
 }
 
 .contact-section{
-    background-color: #46d9ec;
+    background-color: #c2e9ee;
     padding: 90px 20%;
     color: #111;
    text-align: center;
