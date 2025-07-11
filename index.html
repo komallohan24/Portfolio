@@ -1,392 +1,146 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komal Portfolio</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
 
-body{
- font-family: 'Segoe UI',sans-serif;
- background: linear-gradient(#052e55 ,#eaedf0);
- color: white;
-}
+    <!--Nav bar-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">K</div>
 
-header{
-    background-color: #010e1a;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 20px;
-}
+      <!--Destop Nav-->      
+      <ul class="nav-links" id="navlinks">
+        <li><a href ="#home" class ="active">Home</a></li>
+        <li><a href="#about" >About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+      <div class="nav-actions">
+        <a href="#contact" class="contact-btn">&#128222; Contact Me</a>
+        <div class="menu-icon" id="menuIcon">&#9776;</div>
+      </div>
+     </nav>
+    </header>
 
-.logo{
-    background-color: white;
-    padding: 8px 16px;
-    border-radius: 50%;
-    color: #011129;
-    font-size: 24px;
-    font-weight: bolder;
-}
+    <!--home-->
+    <section id="home" class="homeSection">
+        <div class="home-text">
+            <h3>Hello</h3>
+            <h1>I'm <span>Komal</span></h1>
+            <h2>Full Stack Web Developer</h2>
+            <p>I am a passionate ful-stack web developer with strong expertise in web development.</p>
+            <a href="updated resume.pdf" class="hire-btn" onclick=" openResumeModal">&#128187; Hire Me!</a>
+        </div>
+        
 
-.nav-links{
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
+        <div class="home-img">
+            <img src="komal.jpeg" alt="Komal">
+        </div>
+    </section>
+     <div id="resumeModal" class="resume-modal">
+        <div class="resume-modal-content">
+            <span class="close-btn" onclick="closeResumeModal()">&times;</span>
+            <h3>Download My Resume</h3>
+            <a href="updated resume.pdf" download class="download-btn">Download Resume</a>
+        </div>
+       </div>
+    <!--ABOUT-->
+    <section id="about" class="sectionabout">
+        <h2>About Me</h2>
+        <p>
+            I'm a self-motivated and continously learning web developer who loves turning complex problems into simple, intuitive solutions. My journey started with front-end development, where I mastered creating beautiful user interfaces.
+        </p>
+        <p>
+            As I grew, I expanded into back-end technologies to build full-fledged web applications.Currently, I am sharpening my skills in Node.js and java, expanding my backened and server-side capabilities.
+        </p>
+        <p>
+            I enjoy learning new technologies and constantly challenge myself to keep up with industry trends.
+        </p>
+    </section>
 
-.nav-links li a.active, 
-.nav-links li a:hover{
-    color: yellow;
-}
+    <!--skills-->
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Frontend Development</h3>
+                <img src="frontend.png" alt="Frontend Icon">
+                <p>HTML, CSS, Javascript, React.js(learning)</p>
+            </div>
 
-.contact-btn{
-    background: white;
-    color: black;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 20px;
-}
+         <div class="skill-card">
+            <h3>Backend Development</h3>
+            <img src="backend.jpg" alt="Backend Icon">
+            <p>Node.js, Java(learning)</p>
+         </div>
 
-.menu-icon{
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin-left: 20px;
-}
+         <div class="skill-card">
+            <h3>Database</h3>
+            <img src="database.jpg" alt="Database Icon">
+            <p>SQL, MongoDB</p>
+         </div>
 
-.homeSection{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 10%;
-    background: linear-gradient(#052e55 ,#eaedf0);
-    min-height: 100vh;
-     border-bottom: 2px solid #021f1d;
-}
+         <div class="skill-card">
+            <h3>Tools and Technologies</h3>
+            <img src="tool.png" alt="Tools Icon">
+            <p>Git & GitHub, VScode, Responsive Design, Deployment</p>
+         </div>
+            </div>
+    </section>
 
-.home-text{
-    flex: 1;
-    max-width: 500px;
-}
+<!--project-->
+<section id ="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <p class="projects-subtitle">Some of my GitHub projects</p>
 
-.home-text h1{
-    font-size: 48px;
-    margin: 10px 0;
-}
+    <div class="projects-container">
 
-.home-text h1 span{
-    color: #061d33;
-}
+    <!--Project 1-->
+    <div class="project-card">
 
-.home-text h2{
-    font-size: 32px;
-    margin: 15px;
-    color: #ddd;
-}
+        <div class="project-card">
+        <img src="project1.png" alt="Digital Clock">
+        <h3>Digital Clock</h3>
+        <p>HTML, CSS, Javascript</p>
+        <a href="https://github.com/komallohan24/js-hindi-youtube/tree/main/Digital%20clock" class="view-btn">View</a>
+    </div>
 
-.home-text p{
-    font-size: 20px;
-    margin-bottom: 25px;
-}
+    <!--project2-->
+    <div class="project-card">
+        <img src="project2.png" alt="Portfolio">
+        <h3>Portfolio</h3>
+        <p>HTML, CSS, Javascript</p>
+        <a href="https://github.com/komallohan24/Portfolio/tree/portfolio"class="view-btn">View</a>
+    </div>
+    </div>
+</section>
 
-.hire-btn{
-    background-color: #053964;
-    color: whitesmoke;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-}
+<!--contact-->
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <p class="contact-subtitle">Please fill out the form below to discuss any work opportunities</p>
 
-.resume-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
 
-.resume-modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 30px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  position: relative;
-}
-
-.download-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #06b6d4;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-}
-
-.close-btn {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.home-img img{
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #000f11;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-.sectionabout{
-    background-color: #c2e9ee;
-    padding: 90px 20%;
-    color: #111;
-    border-bottom: 2px solid #021f1d;
-}
-
-.sectionabout h2{
-    font-weight: bold;
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.sectionabout p{
-   font-size: 1.1rem;
-   line-height: 1.7;
-   margin-bottom: 15px;
-   color: #333;
-}
-
-.skills-section{
-    background-color: #c2e9ee;
-    padding: 90px 20%;
-    color: #111;
-   text-align: center;
-    border-bottom: 2px solid #021f1d;
+    <div class="social-icons">
+        <a href="#"><img src="github.png" alt="GitHub"></a>
+         <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+          <a href="#"><img src="linkedin.jpg" alt="LinkedIn"></a>
+           <a href="#"><img src="gmail.jpg" alt="Gmail"></a>
+    </div>
+</section>
     
-}
-
-.skills-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap:10px;
-    padding: 20px 10px;
-    background: #06b6d4;
-}
-
-.skill-card{
-    background-color: linear-gradient(to bottom, #e0f2ff, #c3dafe);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    background: #c2e9ee;
-}
-
-.skill-card:hover{
-    transform: translateY(-5px);
-}
-
-.skill-card h3{
-   font-size: 1.2rem;
-   margin-bottom: 10px;
-   color: #1f2937;
-
-}
-.skill-card p{
-    font-size: 0.95rem;
-    color: #333;
-}
-.skill-card img{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.projects-section{
-     background-color: #c2e9ee;
-    padding: 90px 20%;
-    color: #111;
-   text-align: center;
-    border-bottom: 2px solid #021f1d;
-}
-
-.projects-subtitle{
-    text-align: center;
-    font-size: 1rem;
-    color: #111;
-    margin-bottom: 40px;
-}
-
-.projects-container
-{
-   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap:10px;
-    padding: 20px 10px;
-    background: #06b6d4;
-}
-
-.project-card{
-      background-color: linear-gradient(to bottom, #e0f2ff, #c3dafe);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    background: #c2e9ee;
-}
-
-.project-card:hover{
-    transform: translateY(-5px);
-}
-
-.project-card img{
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.project-card h3{
-    font-size: 1.2rem;
-    color: #06b6d4;
-    margin-bottom: 5px;
-}
-
-.project-card p{
-font-size: 0.95rem;
-color: #555;
-margin-bottom: 15px;
-}
-
-.view-btn{
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #06b6d4;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-}
-
-.contact-section{
-    background-color: #c2e9ee;
-    padding: 90px 20%;
-    color: #111;
-   text-align: center;
-    border-bottom: 2px solid #021f1d;
-}
-
-.contact-subtitle{
-    font-size: 1rem;
-    max-width: #f1f1f1;
-    margin-bottom: 30px;
-}
-
-.contact-form{
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    outline: none;
-}
-
-.contact-form button{
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: white;
-    color: #4343a1;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.contact-form button:hover{
-    background-color: #ddd;
-}
-
-.social-icons{
-    margin-top: 30px;
-}
-
-.social-icons a img{
-    width: 35px;
-    height: 35px;
-    margin: 0 10px;
-    transition: transform 0.2s;
-}
-
-.social-icons a img:hover{
-    transform: scale(1.2);
-}
-
-@media(max-width:768px){
-    .nav-links{
-        display: none;
-        flex-direction: column;
-        background-color: #111;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-    }
-
-    .nav-links.show
-    {
-        display: flex;
-}
-
-.menu-icon{
-    display: block;
-}
-
-.nav-actions{
-    display: flex;
-    align-items: center;
-}
-
-.homeSection{
- flex-direction: column;
- text-align: center;
- padding: 40px 5%;
-}
-
-.home-img{
-    margin-top: 30px;
-}
-
-}
-
+    <script src="script.js"></script>
+</body>
+</html>
