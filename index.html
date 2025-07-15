@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Komal Portfolio</title>
     <link rel="stylesheet" href = "style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "GI1tIbI2IxX-n9_Du",
+        });
+    })();
+    </script>
 </head>
 <body>
 
@@ -127,10 +137,10 @@
     <p class="contact-subtitle">Please fill out the form below to discuss any work opportunities</p>
 
     <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Submit</button>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email"id="email" name="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"id="message" name="message" rows="5" required></textarea>
+        <button type="submit" onclick="sendMail()">Submit</button>
     </form>
 
     <div class="social-icons">
